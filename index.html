@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Profil Murid RPL</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icon -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #12355b;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin-left: 10px;
+        }
+
+        .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            padding-top: 80px;
+            background: linear-gradient(135deg, #0d6efd, #12355b);
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .profile {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: white;
+            color: #0d6efd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+            margin: auto;
+        }
+
+        /* SECTION */
+        section {
+            padding: 80px 0;
+        }
+
+        .judul {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .judul h2 {
+            font-weight: bold;
+        }
+
+        /* CARD */
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* PROGRESS */
+        .progress {
+            height: 12px;
+            margin-bottom: 20px;
+        }
+
+        /* JURUSAN */
+        #jurusan {
+            background: #f5f7fa;
+        }
+
+        .jurusan-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            max-width: 850px;
+            margin: auto;
+            box-shadow: 0 5px 20px rgba(0,0,0,.1);
+        }
+
+        .jurusan-card img {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+        }
+
+        .jurusan-card h3 {
+            color: #0d6efd;
+            font-weight: bold;
+        }
+
+        /* TOMBOL JURUSAN */
+        .nav-pills .nav-link {
+            color: #0d6efd !important;
+            border-radius: 25px;
+            border: 1px solid #0d6efd;
+        }
+
+        .nav-pills .nav-link.active {
+            background: #0d6efd;
+            color: white !important;
+        }
+
+        /* KONTAK */
+        #kontak {
+            background: #0d6efd;
+            color: white;
+        }
+
+        .kontak-box {
+            padding: 25px;
+            background: rgba(255,255,255,.15);
+            border-radius: 15px;
+        }
+
+        .kontak-box i {
+            font-size: 30px;
+            color: #ffc107;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #12355b;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* HP */
+        @media(max-width:768px) {
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .profile {
+                width: 180px;
+                height: 180px;
+                font-size: 80px;
+                margin-top: 40px;
+            }
+
+            .jurusan-card {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#beranda">
+            <i class="bi bi-code-slash"></i>
+            Profil RPL
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#beranda">
+                        Beranda
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentang">
+                        Tentang Saya
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#jurusan">
+                        Jurusan
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#denah">
+                        Denah
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= BERANDA ================= -->
+
+<section id="beranda" class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-7">
+
+                <span class="badge bg-light text-primary">
+                    SISWA RPL
+                </span>
+
+                <h1 class="mt-3">
+                    Halo, Saya
+                    <span class="text-warning">
+                        Nama Siswa
+                    </span>
+                </h1>
+
+                <p class="lead">
+                    Siswa jurusan Rekayasa Perangkat Lunak
+                    yang tertarik dengan pemrograman dan
+                    teknologi.
+                </p>
+
+                <!-- TOMBOL BISA DIKLIK -->
+                <a href="#tentang"
+                   class="btn btn-warning btn-lg">
+                    Tentang Saya
+                </a>
+
+                <a href="#jurusan"
+                   class="btn btn-outline-light btn-lg">
+                    Lihat Jurusan
+                </a>
+
+            </div>
+
+
+            <div class="col-md-5 text-center">
+
+                <div class="profile">
+
+                    <i class="bi bi-person-fill"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TENTANG ================= -->
+
+<section id="tentang">
+
+    <div class="container">
+
+        <div class="judul">
+
+            <p class="text-primary fw-bold">
+                PROFIL
+            </p>
+
+            <h2>Tentang Saya</h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- DATA DIRI -->
+            <div class="col-md-6">
+
+                <div class="card p-4">
+
+                    <h4>
+                        <i class="bi bi-person-vcard text-primary"></i>
+                        Data Diri
+                    </h4>
+
+                    <hr>
+
+                    <p>
+                        <b>Nama:</b>
+                        Nama Siswa
+                    </p>
+
+                    <p>
+                        <b>Kelas:</b>
+                        XI RPL
+                    </p>
+
+                    <p>
+                        <b>NIS:</b>
+                        123456
+                    </p>
+
+                    <p>
+                        <b>Alamat:</b>
+                        Jl. Setia Gg. Rukun No. 1A
+                    </p>
+
+                    <p>
+                        <b>Jurusan:</b>
+                        Rekayasa Perangkat Lunak
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- KEAHLIAN -->
+            <div class="col-md-6">
+
+                <div class="card p-4">
+
+                    <h4>
+                        <i class="bi bi-bar-chart-fill text-primary"></i>
+                        Keahlian
+                    </h4>
+
+                    <hr>
+
+                    <p>HTML & CSS</p>
+
+                    <div class="progress">
+                        <div class="progress-bar"
+                             style="width:85%">
+                            85%
+                        </div>
+                    </div>
+
+
+                    <p>JavaScript</p>
+
+                    <div class="progress">
+                        <div class="progress-bar"
+                             style="width:70%">
+                            70%
+                        </div>
+                    </div>
+
+
+                    <p>PHP & MySQL</p>
+
+                    <div class="progress">
+                        <div class="progress-bar"
+                             style="width:75%">
+                            75%
+                        </div>
+                    </div>
+
+
+                    <p>Git</p>
+
+                    <div class="progress">
+                        <div class="progress-bar"
+                             style="width:65%">
+                            65%
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= JURUSAN ================= -->
+
+<section id="jurusan">
+
+    <div class="container">
+
+        <div class="judul">
+
+            <p class="text-primary fw-bold">
+                PROGRAM KEAHLIAN
+            </p>
+
+            <h2>6 Jurusan di Sekolah</h2>
+
+            <p>
+                Klik tombol jurusan di bawah.
+            </p>
+
+        </div>
+
+
+        <!-- TOMBOL JURUSAN -->
+
+        <ul class="nav nav-pills justify-content-center gap-2 mb-4">
+
+            <li class="nav-item">
+                <button class="nav-link active"
+                        data-bs-toggle="pill"
+                        data-bs-target="#rpl">
+                    RPL
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button class="nav-link"
+                        data-bs-toggle="pill"
+                        data-bs-target="#dkv">
+                    DKV
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button class="nav-link"
+                        data-bs-toggle="pill"
+                        data-bs-target="#peksos">
+                    PEKSOS
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button class="nav-link"
+                        data-bs-toggle="pill"
+                        data-bs-target="#tkj">
+                    TKJ
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button class="nav-link"
+                        data-bs-toggle="pill"
+                        data-bs-target="#animasi">
+                    ANIMASI
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button class="nav-link"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pspt">
+                    PSPT
+                </button>
+            </li>
+
+        </ul>
+
+
+        <!-- ISI JURUSAN -->
+
+        <div class="tab-content">
+
+
+            <!-- RPL -->
+
+            <div class="tab-pane fade show active"
+                 id="rpl">
+
+                <div class="jurusan-card">
+
+                    <img src="assets/logo/rpl.svg"
+                         alt="Logo RPL">
+
+                    <h3>
+                        Rekayasa Perangkat Lunak
+                    </h3>
+
+                    <p>
+                        <b>Visi:</b>
+                        Menjadi pengembang perangkat lunak
+                        yang kompeten dan kreatif.
+                    </p>
+
+                    <p>
+                        <b>Misi:</b>
+                        Mengembangkan kemampuan pemrograman,
+                        desain aplikasi, dan teknologi digital.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DKV -->
+
+            <div class="tab-pane fade"
+                 id="dkv">
+
+                <div class="jurusan-card">
+
+                    <img src="assets/logo/dkv.svg"
+                         alt="Logo DKV">
+
+                    <h3>
+                        Desain Komunikasi Visual
+                    </h3>
+
+                    <p>
+                        <b>Visi:</b>
+                        Menjadi desainer visual kreatif
+                        untuk industri kreatif.
+                    </p>
+
+                    <p>
+                        <b>Misi:</b>
+                        Mengembangkan kreativitas, desain,
+                        ilustrasi, dan komunikasi visual.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PEKSOS -->
+
+            <div class="tab-pane fade"
+                 id="peksos">
+
+                <div class="jurusan-card">
+
+                    <img src="assets/logo/peksos.svg"
+                         alt="Logo PEKSOS">
+
+                    <h3>
+                        Pekerjaan Sosial
+                    </h3>
+
+                    <p>
+                        <b>Visi:</b>
+                        Menjadi tenaga sosial profesional
+                        yang peduli dan berempati.
+                    </p>
+
+                    <p>
+                        <b>Misi:</b>
+                        Mengembangkan kepedulian, empati,
+                        dan keterampilan pelayanan sosial.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TKJ -->
+
+            <div class="tab-pane fade"
+                 id="tkj">
+
+                <div class="jurusan-card">
+
+                    <img src="assets/logo/tkj.svg"
+                         alt="Logo TKJ">
+
+                    <h3>
+                        Teknik Komputer dan Jaringan
+                    </h3>
+
+                    <p>
+                        <b>Visi:</b>
+                        Menjadi teknisi dan administrator
+                        jaringan yang handal.
+                    </p>
+
+                    <p>
+                        <b>Misi:</b>
+                        Menguasai komputer, jaringan,
+                        keamanan, dan administrasi sistem.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ANIMASI -->
+
+            <div class="tab-pane fade"
+                 id="animasi">
+
+                <div class="jurusan-card">
+
+                    <img src="assets/logo/animasi.svg"
+                         alt="Logo Animasi">
+
+                    <h3>
+                        Animasi
+                    </h3>
+
+                    <p>
+                        <b>Visi:</b>
+                        Menjadi animator yang kreatif
+                        dan produktif.
+                    </p>
+
+                    <p>
+                        <b>Misi:</b>
+                        Mengembangkan kemampuan animasi
+                        2D, 3D, ilustrasi, dan multimedia.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PSPT -->
+
+            <div class="tab-pane fade"
+                 id="pspt">
+
+                <div class="jurusan-card">
+
+                    <img src="assets/logo/pspt.svg"
+                         alt="Logo PSPT">
+
+                    <h3>
+                        Produksi dan Siaran Program Televisi
+                    </h3>
+
+                    <p>
+                        <b>Visi:</b>
+                        Menjadi insan pertelevisian
+                        yang profesional dan beretika.
+                    </p>
+
+                    <p>
+                        <b>Misi:</b>
+                        Mengembangkan kemampuan produksi,
+                        penyiaran, kamera, audio, dan editing.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DENAH ================= -->
+
+<section id="denah">
+
+    <div class="container">
+
+        <div class="judul">
+
+            <p class="text-primary fw-bold">
+                LOKASI
+            </p>
+
+            <h2>Denah Rumah ke Sekolah</h2>
+
+        </div>
+
+
+        <div class="card overflow-hidden">
+
+            <div class="ratio ratio-16x9">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Jl.+Patriot+No.+20,+Sunggal&output=embed"
+                    style="border:0;"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div class="p-4">
+
+                <p>
+                    <b>Rumah:</b>
+                    Jl. Setia Gg. Rukun No. 1A,
+                    Gaperta Ujung
+                </p>
+
+                <p>
+                    <b>Sekolah:</b>
+                    Jl. Patriot No. 20, Sunggal
+                </p>
+
+
+                <!-- BISA DIKLIK -->
+
+                <a
+                    href="https://www.google.com/maps/dir/?api=1&origin=Jl.+Setia+Gg.+Rukun+No.+1A,+Gaperta+Ujung&destination=Jl.+Patriot+No.+20,+Sunggal"
+                    target="_blank"
+                    class="btn btn-primary">
+
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Buka Rute Google Maps
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KONTAK ================= -->
+
+<section id="kontak">
+
+    <div class="container text-center">
+
+        <h2>Kontak</h2>
+
+        <p>
+            Silakan hubungi saya.
+        </p>
+
+
+        <div class="row g-3 justify-content-center">
+
+
+            <div class="col-md-4">
+
+                <div class="kontak-box">
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                    <h5>Email</h5>
+
+                    <p>
+                        emailkamu@example.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="kontak-box">
+
+                    <i class="bi bi-whatsapp"></i>
+
+                    <h5>WhatsApp</h5>
+
+                    <p>
+                        08xxxxxxxxxx
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="kontak-box">
+
+                    <i class="bi bi-github"></i>
+
+                    <h5>GitHub</h5>
+
+                    <p>
+                        github.com/username
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h5>Website Profil Siswa RPL</h5>
+
+    <p>
+        RPL • DKV • PEKSOS • TKJ • ANIMASI • PSPT
+    </p>
+
+    <p>
+        © 2026 Profil Siswa RPL
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT BOOTSTRAP -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
